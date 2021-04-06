@@ -179,7 +179,8 @@ func handleRequests() {
 	myRouter.HandleFunc("/product/{id}", deleteProduct).Methods("DELETE")
 	myRouter.HandleFunc("/product/upload", uploadFile).Methods("POST")
 
-	log.Fatal(http.ListenAndServe(":10000", myRouter))
+	log.Fatal(http.ListenAndServe(":8080", myRouter))
+	log.Println("Server is listening on port 8080")
 }
 
 func main() {
